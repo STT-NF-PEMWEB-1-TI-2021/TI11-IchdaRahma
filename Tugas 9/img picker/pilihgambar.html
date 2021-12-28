@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/imgpckr.css">
+    <title>Pilih Gambar</title>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container-image">
+            <h1>Image Picker</h1>
+            <div class="select-img">
+                <select name="select_img" id="select_img" onchange="gantiGambar();">
+                    <option id="g1" value="1">1</option>
+                    <option id="g2" value="2">2</option>
+                    <option id="g3" value="3">3</option>
+                    <option id="g4" value="4">4</option>
+                    <option id="g5" value="5">5</option>
+                    <option id="g6" value="6">6</option>
+                </select>
+            </div>
+            <div class="change-img" style="margin-top: 40px;">
+                <img id="imgDefault" src="img/1.jpg" style="width: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function gantiGambar() {
+            var getSelect = document.getElementById('select_img').value;
+
+            var g1 = document.getElementById('g1').value;
+            var g2 = document.getElementById('g2').value;
+            var g3 = document.getElementById('g3').value;
+            var g4 = document.getElementById('g4').value;
+            var g5 = document.getElementById('g5').value;
+            var g6 = document.getElementById('g6').value;
+
+            var imgDefault = document.getElementById('imgDefault');
+
+            if (getSelect == g2) {
+                imgDefault.src = 'img/2.jpg';
+                alert('this is 2 image');
+            }
+            else if (getSelect == g3) {
+                imgDefault.src = 'img/3.jpg';
+                alert('this is 3 image');
+            }
+            else if (getSelect == g4) {
+                imgDefault.src = 'img/4.jpg';
+                alert('this is 4 image');
+            }
+            else if (getSelect == g5) {
+                imgDefault.src = 'img/5.jpg';
+                alert('this is 5 image');
+            } else if (getSelect == g6) {
+                imgDefault.src = 'img/6.jpg';
+                alert('this is 6 image');
+            } else {
+                imgDefault.src = 'img/7.jpg';
+                alert('this is 1 image');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
